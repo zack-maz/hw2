@@ -29,11 +29,8 @@ std::set<std::string> Clothing::keywords() const
   {
     kw.insert(*it);
   }
-<<<<<<< HEAD
   kw.insert(brand_);
   kw.insert(name_);
-=======
->>>>>>> f46831d0f5c72f46dff7778be55cfb1118cfc9d5
   return kw;
 }
 
@@ -46,15 +43,9 @@ std::string Clothing::displayString() const
 
   std::string display = "";
   display += (getName() + "\n");
-<<<<<<< HEAD
   display += ("Size: " + size_ + " ");
   display += ("Brand: " + brand_ + "\n");
   display += (price + " " + std::to_string(getQty()) + " " + "left.");
-=======
-  display += ("Brand: " + brand_ + " ");
-  display += ("Size: " + size_ + "\n");
-  display += (price + " " + std::to_string(getQty()) + " " + "left");
->>>>>>> f46831d0f5c72f46dff7778be55cfb1118cfc9d5
   return display;
 }
 

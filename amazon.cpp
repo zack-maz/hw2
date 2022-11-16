@@ -106,11 +106,7 @@ int main(int argc, char* argv[])
             }
             else if ( cmd == "ADD") {
                 string username;
-<<<<<<< HEAD
                 unsigned int index;
-=======
-                int index;
->>>>>>> f46831d0f5c72f46dff7778be55cfb1118cfc9d5
                 if (ss >> username >> index) {
                     if (!ds.userExists(username)) cout << "Invalid username." << endl;
                     else if (index < 0 || index > hits.size()) cout << "Invalid index." << endl;

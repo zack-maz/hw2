@@ -30,11 +30,8 @@ std::set<std::string> Movie::keywords() const
   {
     kw.insert(*it);
   }
-<<<<<<< HEAD
   kw.insert(genre_);
   kw.insert(name_);
-=======
->>>>>>> f46831d0f5c72f46dff7778be55cfb1118cfc9d5
   return kw;
 }
 
@@ -46,15 +43,9 @@ std::string Movie::displayString() const
 
   std::string display = "";
   display += (getName() + "\n");
-<<<<<<< HEAD
   display += ("Genre: " + genre_ + " ");
   display += ("Rating: " + rating_ + "\n");
   display += (price + " " + std::to_string(getQty()) + " " + "left.");
-=======
-  display += ("Rating: " + rating_ + " ");
-  display += ("Genre: " + genre_ + "\n");
-  display += (price + " " + std::to_string(getQty()) + " " + "left");
->>>>>>> f46831d0f5c72f46dff7778be55cfb1118cfc9d5
   return display;
 }
 

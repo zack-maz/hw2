@@ -84,15 +84,10 @@ void MyDataStore::add(std::string username, Product* p)
     {
         std::cout << "This item is out of stock." << std::endl;
     }
-<<<<<<< HEAD
     else if (usersByName.find(username) == usersByName.end()) {
         std::cout << "Invalid request" << std::endl;
     }
     else {
-=======
-    else {
-        (*products_.find(p))->subtractQty(1);
->>>>>>> f46831d0f5c72f46dff7778be55cfb1118cfc9d5
         cart[username].push_back(p);
         std::cout << "Item added." << std::endl;
     }
@@ -101,18 +96,12 @@ void MyDataStore::add(std::string username, Product* p)
 
 void MyDataStore::viewCart(std::string username)
 {
-<<<<<<< HEAD
     int count = 1;
     for (std::vector<Product*>::iterator it = cart[username].begin(); it != cart[username].end(); ++it)
     {
         std::cout << "Item " << count << std::endl;
         std::cout << (*it)->displayString() << std::endl;
         count++;
-=======
-    for (std::vector<Product*>::iterator it = cart[username].begin(); it != cart[username].end(); ++it)
-    {
-        std::cout << (*it)->getName() << " $" << (*it)->getPrice() << std::endl;
->>>>>>> f46831d0f5c72f46dff7778be55cfb1118cfc9d5
     }
 
 }
@@ -129,7 +118,6 @@ void MyDataStore::buyCart(std::string username) //help with this function
             std::cout << usersByName[username]->getBalance() << " remaining." << std::endl;
             return;
         }
-<<<<<<< HEAD
         else if ((*products_.find(*it))->getQty() == 0)
         {
             std::cout << "This item is out of stock." << std::endl;
@@ -142,11 +130,6 @@ void MyDataStore::buyCart(std::string username) //help with this function
             (*products_.find(*it))->subtractQty(1);
             cart[username].erase(it);
         }
-=======
-        std::cout << (*it)->getName() << " purchased." << std::endl;
-        usersByName[username]->deductAmount((*it)->getPrice());
-        cart[username].erase(it);
->>>>>>> f46831d0f5c72f46dff7778be55cfb1118cfc9d5
     }
 
 
